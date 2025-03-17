@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 
 from artapp.models import *
 
@@ -27,9 +27,9 @@ def single(request):
 
 
 
-def booking(request):
+def hire(request):
     if request.method == "POST":
-        mybookings = Booking(
+        myhirings = hiring(
             name=request.POST['name'],
             email=request.POST['email'],
             phonenumber=request.POST['phone'],
@@ -37,45 +37,30 @@ def booking(request):
 
             message=request.POST['message']
         )
-        mybookings.save()
+        myhirings.save()
         return redirect('/show')
     else:
-        return render(request, 'contact.html')
+        return render(request, 'hiring.html')
 
 
 def contacts(request):
     if request.method == "POST":
-        mybooking= Booking(
+        mycontacts= Contact(
         name= request.POST['name'],
         email =request.POST['email'],
         phonenumber = request.POST['phone'],
         datetime = request.POST['date'],
         message = request.POST['message']
         )
-        mybooking.save()
+        mycontacts.save()
         return redirect('/contact')
     else:
         return render(request, 'contact.html')
 
 
 def show(request):
-    all = Booking.objects.all()
+    all = hiring.objects.all()
     return render(request,'show.html',{'all':all})
 
-def delete(request,id):
-  deletebooking=Booking.objects.get(id=id)
-  deletebooking.delete()
-  return redirect('/show')
 
-def edit(request,id):
-    booking=get_object_or_404(Booking,id=id)
-    if request.method == "POST":
-        Booking.name=request.POST.get('name')
-        Booking.email=request.POST.get('email')
-        Booking.phonenumber=request.POST.get('phonenumber')
-        Booking.datetime=request.POST.get('datetime')
-        Booking.message=request.POST.get('message')
-        Booking.save()
-        return redirect('/show')
-    else:
-        return render(request, 'edit.html',{'Booking':booking})
+

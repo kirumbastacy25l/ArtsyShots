@@ -14,7 +14,6 @@ urlpatterns = [
     path('starter/', views.starter, name='starter'),
     path('gallery-single/', views.single, name='gallery-single'),
     path('show/', views.show, name='show'),
-    path('delete/<int:id>', views.delete),
-    path('edit/<int:id>', views.edit, name='edit'),
+    path('hiring/', views.hire, name='hiring'),
 
 ]

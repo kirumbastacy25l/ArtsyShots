@@ -15,21 +15,7 @@
     <p><strong>Date and Time : </strong>  {{ x.datetime }}</p>
 
     <p><strong>Message : </strong>  {{ x.message }}</p>
-    <p>
-        <a href="{% url 'edit' x.id %}" class="text-warning me-5">
-            <i class="bi bi-pencil">Edit</i>
-        </a>
 
-
-        <a href="/delete/{{ x.id }}" class="text-danger">
-            <i class="bi bi-trash">Delete</i>
-        </a>
-
-         <a href="{% url 'pay' %}" class="text-success">
-                    <i class="bi bi-credit-card"></i>Pay
-         </a>
-
-    </p>
 
 
     </div>
