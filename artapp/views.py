@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from artapp.models import *
 
@@ -61,6 +61,25 @@ def contacts(request):
 def show(request):
     all = hiring.objects.all()
     return render(request,'show.html',{'all':all})
+
+def delete(request,id):
+  deletehiring=hiring.objects.get(id=id)
+  deletehiring.delete()
+  return redirect('/show')
+
+def edit(request, id, ):
+    appointment=get_object_or_404(hiring,id=id)
+    if request.method == "POST":
+        hiring.name=request.POST.get('name')
+        hiring.email=request.POST.get('email')
+        hiring.phonenumber=request.POST.get('phonenumber')
+        hiring.datetime=request.POST.get('datetime')
+        hiring.message=request.POST.get('message')
+        hiring.save()
+        return redirect('/show')
+    else:
+        return render(request, 'edit.html',{'hiring':hiring})
+
 
 
 
