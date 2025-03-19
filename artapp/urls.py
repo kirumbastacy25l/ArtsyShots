@@ -6,8 +6,10 @@ from artapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),
+    path('home/', views.index, name='home'),
     path('contact/', views.contact, name='contact'),
+    path('', views.register, name='register'),
+    path('login/', views.login_view, name='login'),
     path('about/', views.about, name='about'),
     path('gallery/',views.gallery, name='gallery' ),
     path('service/', views.service, name='service'),
