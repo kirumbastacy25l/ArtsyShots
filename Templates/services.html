@@ -42,7 +42,7 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <i class="bi bi-camera"></i>
@@ -51,16 +51,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="{% url 'home' %}">Home<br></a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li class="dropdown"><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="gallery.html">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
+              <li><a href="{% url 'gallery' %}">Nature</a></li>
+              <li><a href="{% url 'gallery' %}">People</a></li>
+              <li><a href="{% url 'gallery' %}">Architecture</a></li>
+              <li><a href="{% url 'gallery' %}">Animals</a></li>
+              <li><a href="{% url 'gallery' %}">Sports</a></li>
+              <li><a href="{% url 'gallery' %}l">Travel</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
@@ -72,8 +72,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'service' %}" class="active">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -97,7 +97,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Services</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p class="mb-0">ArtsyShots is dedicated to providing high-quality services that meet the needs of our customers. With a focus on innovation, reliability, and exceptional customer service, we strive to deliver the best solutions for the people and the photo industry.</p>
              
             </div>
           </div>
@@ -106,7 +106,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li class="current">Services</li>
           </ol>
         </div>
@@ -123,32 +123,32 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="" class="stretched-link">QUALITY</a></h4>
+              <p>The kind of services offered are assured to be of high quality and satisfy the needs of our customers.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="" class="stretched-link">RELIABIITY</a></h4>
+              <p> We are committed to delivering consistent, high-quality results, ensuring that the clients and partners can always count on us to meet their needs with integrity and excellence.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="" class="stretched-link">TIMELINESS/a></h4>
+              <p>Time is a factor that is being highly considered for every client interested in the services</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4><a href="" class="stretched-link">CONNECTIVITY</a></h4>
+              <p>Connection to every client is necessary and we ensure that we are connected to our clients worlwide.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -268,12 +268,12 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  "Building a strong brand image is crucial for any business, and this photo studio helped me achieve just that. From the moment I walked in, I was treated with professionalism and care. The team understood my vision and brought it to life with stunning, high-quality images that perfectly reflect my company’s values. I highly recommend their services to any entrepreneur looking to stand out!"
                 </p>
                 <div class="profile mt-auto">
                   <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <h3>Dante Darnitto</h3>
+                  <h4>Founder</h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -284,8 +284,8 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
+                   I had an amazing experience at this photo studio! The team was incredibly professional, and they made me feel comfortable from start to finish. The photographer had an eye for detail, ensuring every shot was perfect. The final edits were stunning—I couldn’t be happier!"
+               </p>
                 <div class="profile mt-auto">
                   <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
@@ -300,7 +300,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  I needed professional headshots for my portfolio, and this studio exceeded my expectations. The staff guided me on poses and lighting, making the process smooth and enjoyable. The turnaround time was quick, and the results were outstanding. Highly recommend!"
                 </p>
                 <div class="profile mt-auto">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
@@ -316,7 +316,8 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  "As an aspiring actor, I needed high-quality portfolio shots, and this studio delivered beyond my expectations. The lighting, composition, and attention to detail were phenomenal. I felt like a star, and my photos turned out amazing. Definitely coming back!"
+
                 </p>
                 <div class="profile mt-auto">
                   <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
@@ -332,7 +333,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                 "As a business owner, I needed high-quality branding photos that truly represented my vision. This studio delivered exceptional service, from the consultation to the final edits. The photographer understood my brand identity and created images that perfectly captured my professional yet approachable look. I couldn't be more impressed!
                 </p>
                 <div class="profile mt-auto">
                   <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
