@@ -4,11 +4,13 @@
 <!------ Include the above in your HEAD tag ---------->
 
 {% load static %}
+
 <link rel="stylesheet" href="{% static 'css/register.css' %}">
 
 <div class="col-md-4 col-md-offset-4" id="login">
 						<section id="inner-wrapper" class="login">
 							<article>
+                                <h1 >Create account to proceed</h1>
 								<form method="post">
                                     {% csrf_token %}
 									<div class="form-group">
@@ -20,7 +22,7 @@
 									<div class="form-group">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
-											<input type="email" name="email" class="form-control" placeholder="Email Address">
+											<input type="email" name="emailaddress" class="form-control" placeholder="Email Address">
 										</div>
 									</div>
 									<div class="form-group">
@@ -36,6 +38,7 @@
 										</div>
 									</div>
 									  <button type="submit" class="btn btn-success btn-block">Submit</button>
+                                    <p class="text-center">Have an account? <a href="{% url 'login' %}">Log In</a> </p>
 								</form>
 							</article>
 						</section></div>
